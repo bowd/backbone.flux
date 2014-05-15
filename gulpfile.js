@@ -11,10 +11,10 @@ var paths = {
 gulp.task('build', function() {
   gulp.src(paths.core)
     .pipe(coffee())
-    .pipe(concat('backbone-flux.js'))
+    .pipe(concat('backbone.flux.js'))
     .pipe(gulp.dest('dist'))
     .pipe(uglify())
-    .pipe(rename('backbone-flux.min.js'))
+    .pipe(rename('backbone.flux.min.js'))
     .pipe(gulp.dest('dist'))
 });
 
