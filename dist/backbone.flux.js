@@ -43,32 +43,22 @@
         patch: true,
         success: (function(_this) {
           return function() {
-            var attr, v, _results;
+            var attr, v;
             for (attr in attributes) {
               v = attributes[attr];
               _this.trigger("" + id + ":update:" + attr + ":success");
             }
-            _results = [];
-            for (attr in attributes) {
-              v = attributes[attr];
-              _results.push(_this.trigger("" + id + ":update:success"));
-            }
-            return _results;
+            return _this.trigger("" + id + ":update:success");
           };
         })(this),
         error: (function(_this) {
           return function() {
-            var attr, v, _results;
+            var attr, v;
             for (attr in attributes) {
               v = attributes[attr];
               _this.trigger("" + id + ":update:" + attr + ":error");
             }
-            _results = [];
-            for (attr in attributes) {
-              v = attributes[attr];
-              _results.push(_this.trigger("" + id + ":update:error"));
-            }
-            return _results;
+            return _this.trigger("" + id + ":update:error");
           };
         })(this)
       });
